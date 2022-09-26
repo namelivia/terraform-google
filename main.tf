@@ -1,10 +1,3 @@
-provider "google" {
-  credentials = "${var.google_credentials_file}"
-  project = "peak-ranger-267808"
-  region  = "europ-west1"
-  zone    = "europe-west1-b"
-}
-
 resource "google_compute_instance" "vm_instance" {
   name         = "terraform-instance"
   machine_type = "g1-small"
