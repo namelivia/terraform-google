@@ -1,3 +1,13 @@
+terraform {
+  required_version = ">= 1.0.11"
+  required_providers {
+    google = {
+      source = "hashicorp/google"
+      version = "=4.37.0"
+    }
+  }
+}
+
 resource "google_compute_instance" "vm_instance" {
   name         = "terraform-instance"
   machine_type = "g1-small"
